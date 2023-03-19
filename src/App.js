@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import AirConditions from './components/AirConditions/AirConditions';
+import Glance from './components/Glance/Glance';
+import Searchbar from './components/Searchbar/Searchbar';
+import SideNav from './components/SideNav/SideNav';
+import TodaysForecast from './components/TodaysForecast/TodaysForecast';
+import WeekForecast from './components/WeekForecast/WeekForecast';
+// import { Grid } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Searchbar className='app-item'/>
+      <SideNav className='app-item'/>
+      <Glance className='app-item'/>
+      <TodaysForecast className='app-item'/>
+      <AirConditions className='app-item'/>
+      <WeekForecast className='app-item'/>
     </div>
   );
 }

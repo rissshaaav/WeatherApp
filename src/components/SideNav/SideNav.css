@@ -1,0 +1,13 @@
+.navItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    margin-bottom: 50px;
+}
+/* .items{
+    margin-bottom: 20px;
+    border: solid;
+} */
