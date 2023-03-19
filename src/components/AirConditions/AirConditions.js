@@ -6,9 +6,16 @@ import Brightness7OutlinedIcon from '@mui/icons-material/Brightness7Outlined';
 import { Grid, Stack, Box, Button } from '@mui/material';
 
 const AirConditions = ({className}) => {
+    const styles = () => {
+        return{
+            fontSize: '32px',
+            fontWeight: '600',
+            color: '#c4cad3'
+        }
+    }
     return (
-        <div className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px'}}>
-            <Grid container>
+        <>
+            <Grid container  className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px'}}>
 
                 <Grid item xs={12}>
 
@@ -18,7 +25,7 @@ const AirConditions = ({className}) => {
                         sx={{display: 'flex', justifyContent: 'space-between'}}
                         >
                         <Box>AIR CONDITIONS</Box>
-                        <Button variant='contained'>See More</Button>
+                        <Button variant='contained' size='small' sx={{borderRadius: '20px'}}>See More</Button>
                     </Stack>
 
                 </Grid>
@@ -29,19 +36,19 @@ const AirConditions = ({className}) => {
                         spacing={2}
                         >
 
-                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
                                 <ThermostatOutlinedIcon/>
-                            <Box sx={{display: 'inline-block'}}>
+                            <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Real Feel</span>
-                                <Box>30°</Box>
+                                <Box sx={styles()}>30°</Box>
                             </Box>
                         </Box>
 
-                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', alignItems: 'flex-start'}}>
                                 <InvertColorsOutlinedIcon/>
-                            <Box sx={{display: 'inline-block'}}>
+                            <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Chance of Rain</span>
-                                <Box>0%</Box>
+                                <Box sx={styles()}>0%</Box>
                             </Box>
                         </Box>
 
@@ -55,19 +62,19 @@ const AirConditions = ({className}) => {
                         spacing={2}
                         >
 
-                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', alignItems: 'flex-start'}}>
                                 <AirOutlinedIcon/>
-                            <Box sx={{display: 'inline-block'}}>
+                            <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Wind</span>
-                                <Box>0.2 km/h</Box>
+                                <Box sx={styles()}>0.2 km/h</Box>
                             </Box>
                         </Box>
 
-                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', alignItems: 'flex-start'}}>
                                 <Brightness7OutlinedIcon/>
-                            <Box sx={{display: 'inline-block'}}>
+                            <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>UV Index</span>
-                                <Box>3</Box>
+                                <Box sx={styles()}>3</Box>
                             </Box>
                         </Box>
 
@@ -76,7 +83,7 @@ const AirConditions = ({className}) => {
                 </Grid>
 
             </Grid>
-        </div>
+        </>
     )
 }
 

@@ -54,7 +54,7 @@ const WeekForecast = ({className}) => {
     ]
 
   return (
-    <div className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px'}}>
+    <div className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Box>7-day Forecast</Box>
         <Stack
             direction="column"
@@ -67,13 +67,14 @@ const WeekForecast = ({className}) => {
                         <Box key={index}
                             sx={{
                                 display: 'flex',
-                                justifyContent: 'space-between',
-                                alignItems: 'center'
+                                justifyContent: 'space-around',
+                                alignItems: 'center',
+                                p: '3px 0'
                             }}
                         >
                             <span>{item.day}</span>
-                            <Box>
-                                <span style={{margin: '5px'}}>{item.icon}</span>
+                            <Box sx={{display: 'flex', alignItems: 'center'}}>
+                                <span style={{margin: '0 20px'}}>{item.icon}</span>
                                 <span>{item.weather}</span>
                             </Box>
                             <span>{item.maxMinTemp}</span>

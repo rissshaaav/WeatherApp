@@ -1,8 +1,13 @@
 :root{
     --componentBGC: #202b3b;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .App{
-    padding: 10px;
+    padding: 20px;
     background-color: #0b131e;
     height: 100vh;
     color: #7f8690;
@@ -11,9 +16,10 @@
                          'nav glance week'
                          'nav today week'
                          'nav air week';
-    grid-template-columns: 8% 60% auto;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 0.1fr 1.5fr 0.8fr;
+    grid-template-rows: 0.2fr 0.8fr 1fr 1fr;
     gap: 20px;
+    font-family: 'Secular One', sans-serif;
 }
 
 .app-item:nth-child(1){
@@ -33,4 +39,7 @@
 }
 .app-item:nth-child(6){
     grid-area: week;
+}
+.app-item{
+    padding: 20px;
 }

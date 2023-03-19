@@ -40,21 +40,22 @@ const TodaysForecast = ({className}) => {
         },
     ]
   return (
-    <div className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px'}}>
+    <div className={`${className}`} style={{backgroundColor: '#202b3b', borderRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
         <Box>Today's Forecast</Box>
         <Stack
             direction="row"
             divider={<Divider orientation="vertical" color='#7f8690' flexItem />}
             spacing={2}
+            justifyContent='space-evenly'
         >
             {
                 todaysForecastList.map((item, index)=>{
                     return(
                         <Box key={index}>
-                            <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                                <Box>{item.time}</Box>
-                                <Box>{item.icon}</Box>
-                                <Box>{item.temp}</Box>
+                            <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} disableGutters= {true}>
+                                <Box sx={{fontWeight: '600', fontSize: '16px'}}>{item.time}</Box>
+                                <Box sx={{m: '10px'}}>{item.icon}</Box>
+                                <Box sx={{fontWeight: '600', fontSize: '24px', color: '#dde0e4'}}>{item.temp}</Box>
                             </Container>
                         </Box>
                     )
@@ -65,4 +66,4 @@ const TodaysForecast = ({className}) => {
   )
 }
 
-export default TodaysForecast
+export default TodaysForecast;

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Stack, Box } from '@mui/material';
-import './SideNav.css';
 import Settings from '@mui/icons-material/Settings';
 import CloudIcon from '@mui/icons-material/Cloud';
 import ListIcon from '@mui/icons-material/List';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 const SideNav = ({className}) => {
   return (
-    <div className={`${className}`} style={{width: 'fit-content'}}>
-        <Stack className='sidenavStack'
+    <>
+        <Stack className={`sidenavStack ${className}`}
             direction="column"
             justifyContent="flex-start"
             alignItems="center"
@@ -36,7 +35,7 @@ const SideNav = ({className}) => {
             </Box>
         </Stack>
       
-    </div>
+    </>
   )
 }
 

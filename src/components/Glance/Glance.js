@@ -10,24 +10,24 @@ const Glance = ({className}) => {
     const city = 'Madrid';
     const cityTemp = 31;
   return (
-    <div className={`${className}`}>
-        <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
+    <>
+        <Box className={`${className}`} sx={{display: 'flex', justifyContent: 'space-around'}}>
             <Stack
                 direction='column'
-                spacing={2}
+                
                 sx={{display: 'flex', flexDirection: 'column' ,justifyContent: 'space-between'}}
                 >
-                    <Box>{city}</Box>
-                    <Box>{`${cityTemp}°`}</Box>
+                    <Box sx={{fontSize: '40px', fontWeight: '600', color: '#f0f1f1'}}>{city}</Box>
+                    <Box sx={{fontSize: '64px', fontWeight: '600', color: '#f0f1f1'}}>{`${cityTemp}°`}</Box>
             </Stack>
             <Stack
                 direction='column'
                 spacing={2}
                 >
-                    <img src={sunny} alt='sunny' style={{height: '100px'}}/>
+                    <img src={sunny} alt='sunny' style={{height: '130px'}}/>
             </Stack>
         </Box>
-    </div>
+    </>
   )
 }
 

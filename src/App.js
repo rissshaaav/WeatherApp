@@ -5,7 +5,6 @@ import Searchbar from './components/Searchbar/Searchbar';
 import SideNav from './components/SideNav/SideNav';
 import TodaysForecast from './components/TodaysForecast/TodaysForecast';
 import WeekForecast from './components/WeekForecast/WeekForecast';
-// import { Grid } from '@mui/material';
 
 function App() {
   return (
