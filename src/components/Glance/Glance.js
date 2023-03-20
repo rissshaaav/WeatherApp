@@ -6,9 +6,9 @@ import cloudNoSun from '../../assets/cloudNoSun.png';
 import cloudWithSun from '../../assets/cloudWithSun.png';
 import { Stack, Box} from '@mui/material';
 
-const Glance = ({className}) => {
-    const city = 'Madrid';
-    const cityTemp = 31;
+const Glance = ({className, city, temp}) => {
+    // const city = 'Madrid';
+    // const cityTemp = 31;
   return (
     <>
         <Box className={`${className}`} sx={{display: 'flex', justifyContent: 'space-around'}}>
@@ -18,7 +18,7 @@ const Glance = ({className}) => {
                 sx={{display: 'flex', flexDirection: 'column' ,justifyContent: 'space-between'}}
                 >
                     <Box sx={{fontSize: '40px', fontWeight: '600', color: '#f0f1f1'}}>{city}</Box>
-                    <Box sx={{fontSize: '64px', fontWeight: '600', color: '#f0f1f1'}}>{`${cityTemp}°`}</Box>
+                    <Box sx={{fontSize: '64px', fontWeight: '600', color: '#f0f1f1'}}>{temp}°</Box>
             </Stack>
             <Stack
                 direction='column'

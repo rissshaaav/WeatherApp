@@ -5,7 +5,7 @@ import AirOutlinedIcon from '@mui/icons-material/AirOutlined';
 import Brightness7OutlinedIcon from '@mui/icons-material/Brightness7Outlined';
 import { Grid, Stack, Box, Button } from '@mui/material';
 
-const AirConditions = ({className}) => {
+const AirConditions = ({className, real_feel, wind_speed, uv_index, chance_of_rain}) => {
     const styles = () => {
         return{
             fontSize: '32px',
@@ -40,7 +40,7 @@ const AirConditions = ({className}) => {
                                 <ThermostatOutlinedIcon/>
                             <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Real Feel</span>
-                                <Box sx={styles()}>30°</Box>
+                                <Box sx={styles()}>{real_feel}°</Box>
                             </Box>
                         </Box>
 
@@ -48,7 +48,7 @@ const AirConditions = ({className}) => {
                                 <InvertColorsOutlinedIcon/>
                             <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Chance of Rain</span>
-                                <Box sx={styles()}>0%</Box>
+                                <Box sx={styles()}>{chance_of_rain}%</Box>
                             </Box>
                         </Box>
 
@@ -66,7 +66,7 @@ const AirConditions = ({className}) => {
                                 <AirOutlinedIcon/>
                             <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>Wind</span>
-                                <Box sx={styles()}>0.2 km/h</Box>
+                                <Box sx={styles()}>{wind_speed} m/s</Box>
                             </Box>
                         </Box>
 
@@ -74,7 +74,7 @@ const AirConditions = ({className}) => {
                                 <Brightness7OutlinedIcon/>
                             <Box sx={{display: 'inline-block', ml: '8px'}}>
                                 <span>UV Index</span>
-                                <Box sx={styles()}>3</Box>
+                                <Box sx={styles()}>{uv_index}</Box>
                             </Box>
                         </Box>
 
